@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="left">
+                <h1>BMI Calculator</h1>
+                <div class="content">
+                    <div class="input">
+                        <label for="height">Height</label>
+                        <div class="ht-content">
+                            <input type="number" id="cm" placeholder="in cm" >
+                            <div class="fts none">
+                                <input type="number" id="fts" placeholder="in ft">
+                                <input type="number" id="inch" placeholder="in inc">
+                            </div>
+                            <select id="htType" onchange="heightType()">
+                                <option value="cm">cm</option>
+                                <option value="fts">fts</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <label for="weight">Weight</label>
+                        <input type="number" id="weight" placeholder="in kg">
+                        <select id="wtType" onchange="weightType()">
+                            <option value="kgs">kgs</option>
+                            <option value="lbs">lbs</option>
+                        </select>
+                    </div>
+                    <button id="calculate">Calculate BMI</button>
+                </div>
+            </div>
+            <div class="right">
+                <div class="result">
+                    <p>Your BMI is</p>
+                    <div id="result">00.00</div>
+                    <p class="comment"></p>
+                </div>
+                <div class="gauge-container">
+                    <div class="center-point"></div>
+                    <div class="gauge-center-hide"></div>
+                    <div class="gauge-bottom-hide"></div>
+                    <div class="arrow-container">
+                        <div class="arrow-wraper bmi-scale">
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                        <div class="gauge-scale scale-1"></div>
+                        <div class="gauge-scale scale-2"></div>
+                        <div class="gauge-scale scale-3"></div>
+                        <div class="gauge-scale scale-4"></div>
+                        <div class="gauge-scale scale-5"></div>
+                        <div class="gauge-scale scale-6"></div>
+                        <div class="gauge-scale scale-7"></div>
+                        <div class="gauge-scale scale-8"></div>
+                        <div class="gauge-scale scale-9"></div>
+                        <div class="gauge-scale scale-10"></div>
+                        <div class="gauge-scale scale-11"></div>
+                        <div class="gauge-scale scale-12"></div>
+                        <div class="gauge-scale scale-13"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
