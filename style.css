@@ -24,6 +24,7 @@ body{
     text-align: center;
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     margin: 0 40px;
 }
 .box::before{
@@ -102,7 +103,10 @@ select{
 /*  */
 /*  */
 .right{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 button#calculate{
     font-family: 'Nunito', sans-serif;
@@ -171,6 +175,7 @@ button#calculate:hover{
     position: relative;
     border-radius: 28px;
     background:linear-gradient(to right,green,yellow,orange, red);
+    /* background-color: #ddd; */
 }
 
 .bmi-value {
