@@ -52,5 +52,9 @@ btn.addEventListener('click',()=>{
             status='Obese'
         }
         document.querySelector('.comment').innerHTML=`Comment: you are <span id="comment">${status}</span>`;
+        const bmiValueElement = document.querySelector('.bmi-value');
+        bmiValueElement.style.width = ` ${100 -((bmi / 40) * 100)}%`;
+        const bmiChartElement = document.querySelector('.bmi-chart');
+        bmiChartElement.style.width = `100%`;
     }
 });

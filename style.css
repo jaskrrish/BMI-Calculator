@@ -113,11 +113,29 @@ button#calculate{
     border-radius: 12px;
     padding: 12px 0;
     width: 100%;
+    margin-bottom: 12px;
     outline: none;
     border: none;
     transition: background .2s ease;
 }
 button#calculate:hover{
+    background-color: skyblue;
+}
+#reset{
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    background-color: rgb(10, 69, 93);
+    font-size: 16px;
+    border-radius: 2px solid rgb(10, 69, 93);
+    border-radius: 12px;
+    padding: 12px 0;
+    width: 100%;
+    margin-bottom: 12px;
+    outline: none;
+    border: none;
+    transition: background .2s ease;
+}
+#reset:hover{
     background-color: skyblue;
 }
 .result{
@@ -144,119 +162,23 @@ button#calculate:hover{
     font-weight: 800;
 }
 /*  */
-/* Gauge  */
-.gauge-container{
-    width: 300px;
-    height: 300px;
-    border: 3px solid black;
-    border-radius: 50%;
-    margin: 50px auto;
-    position: relative;
-    /* overflow:; */
-}
-.center-point{
-    width: 20px;
+/*  */
+/* Bar */
+.bmi-chart {
+    margin-top: 20px;
     height: 20px;
-    background-color: black;
-    border-radius: 50%;
-    position: absolute;
-    top: 137px;
-    left: 137px;
-    z-index: 10;
-}
-.gauge-scale{
-    width: 8px;
-    height: 280px;
-    background-color: black;
-    position: absolute;
-    left: 143px;
-    top: 7px;
-}
-.scale-1{
-    transform: rotate(-90deg);
-}
-.scale-2{
-    transform: rotate(-75deg);
-}
-.scale-3{
-    transform: rotate(-60deg);
-}
-.scale-4{
-    transform: rotate(-45deg);
-}
-.scale-5{
-    transform: rotate(-30deg);
-}
-.scale-6{
-    transform: rotate(-15deg);
-}
-.scale-7{
-    transform: rotate(0deg);
-}
-.scale-8{
-    transform: rotate(15deg);
-}
-.scale-9{
-    transform: rotate(30deg);
-}
-.scale-10{
-    transform: rotate(45deg);
-}
-.scale-11{
-    transform: rotate(60deg);
-}
-.scale-12{
-    transform: rotate(75deg);
-}
-.scale-13{
-    transform: rotate(90deg);
-}
-.gauge-center-hide{
-    width: 250px;
-    height: 250px;
-    background-color: skyblue;
-    border-radius: 50%;
-    position: absolute;
-    top: 22px;
-    left: 22px;
-    z-index: 9;
-    /* overflow: hidden; */
-}
-.gauge-bottom-hide{
-    width: 320px;
-    height: 170px;
-    background: skyblue;
-    position: absolute;
-    z-index: 11;
-    top: 160px;
-    left: -14px;
-    border-top: 1px solid;
-    /* overflow: hidden; */
-}
-.arrow-container{
-    width: 160px;
-    height: 160px;
-    background: transparent;
-    position: absolute;
-    z-index: 12;
-    top: 67px;
-    left: 67px;
-}
-.arrow-wrapper{
-    width: 160px;
-    height: 160px;
-    background-color: transparent;
+    width: 0%;
     position: relative;
-    transition: all 0.4s;
+    border-radius: 28px;
+    background:linear-gradient(to right,green,yellow,orange, red);
 }
-.arrow{
-    width: 110px;
-    height: 4px;
-    background-color: purple;
+
+.bmi-value {
+    height: 20px;
+    right: 0px;
+    width: 0%;
+    border-top-right-radius:28px ;
+    border-bottom-right-radius:28px ;
+    background-color: #ddd;
     position: absolute;
-    top: 78px;
-    left: -28px;
-}
-.bmi-scale{
-    transform: rotate(0deg);
 }
