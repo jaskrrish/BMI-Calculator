@@ -56,6 +56,7 @@ btn.addEventListener('click',()=>{
         bmiValueElement.style.width = ` ${100 -((bmi / 40) * 100)}%`;
         const bmiChartElement = document.querySelector('.bmi-chart');
         bmiChartElement.style.width = `100%`;
+        bmiChartElement.style.transition = `width .4s ease`
         // bmiChartElement.style.background = `linear-gradient(to right,green,yellow,orange, red)`;
     }
 });
