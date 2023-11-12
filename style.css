@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
 /* font-family: 'Nunito Sans', sans-serif; */
 *{
     padding: 0;
@@ -8,23 +9,45 @@ body{
     min-height: 100vh;
     background: #c0c0c0;
     font-family: 'Nunito Sans', sans-serif;
+    background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+  background-size:cover;
+        -webkit-animation: slidein 100s;
+        animation: slidein 100s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;
 }
+@-webkit-keyframes slidein {
+    from {background-position: top; background-size:3000px; }
+    to {background-position: -100px 0px;background-size:2750px;}
+    }
+    
+    @keyframes slidein {
+    from {background-position: top;background-size:3000px; }
+    to {background-position: -100px 0px;background-size:2750px;}
+    
+    }
 .container{
-    width: 90vw;
+    width:90vw;
     height: 90vh;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+    /* display: flex;
+    flex-wrap: wrap; */
 }
 .box{
-    /* min-width: 400px; */
-    /* background: skyblue; */
     border-radius: 50px;
-background: #c0c0c0;
-box-shadow:  14px 14px 28px #adadad,
-             -14px -14px 28px #d3d3d3;
-    /* border-radius: 38px; */
+    /* background: #c0c0c0; */
+    box-shadow:  14px 14px 28px #adadad,
+             -6px -14px 10px #9e9d9d;
     text-align: center;
     position: relative;
     display: flex;
@@ -58,7 +81,7 @@ h1{
 .input input{
     outline: none;
     border: none;
-    border-bottom: 1px solid #2f2c2c;
+    border-bottom: 1px solid black;
     width: 60%;
     text-align: center;
     font-size: 20px;
@@ -70,9 +93,8 @@ select{
     outline: none;
     border: none;
     color: #ddd;
-    background-color: #2f2c2c;
+    background-color: black;
     border-radius: 8px;
-    /* border: 1px solid skyblue; */
     height: 20px;
     width: 50px;
     margin-bottom: 0;
@@ -95,19 +117,14 @@ select{
 }
 /*  */
 /*  */
-.right{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 button{
     font-family: 'Nunito', sans-serif;
     color: white;
-    background-color: #2f2c2c;
+    background-color: black;
     font-size: 16px;
     /* border-radius: 2px solid #2f2c2c; */
     border-radius: 12px;
+    border:2px solid black;
     padding: 12px 0;
     width: 100%;
     margin-bottom: 12px;
@@ -117,6 +134,15 @@ button{
 }
 button:hover{
     background-color: #5e5b5b;
+    /* background-color: transparent; */
+    border:2px solid black;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 140px;
 }
 .result{
     padding: 30px 20px;
@@ -130,7 +156,7 @@ button:hover{
 .result #result{
     font-size: 36px;
     font-weight: 900;
-    color: #2f2c2c;
+    color: black;
     background-color: white;
     display: inline-block;
     padding: 7px 20px;
@@ -138,14 +164,15 @@ button:hover{
     margin-bottom: 25px;
 }
 #comment{
-    color: blue;
+    color: white;
     font-weight: 800;
 }
 /*  */
 /*  */
 /* Bar */
 .bmi-chart {
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     height: 20px;
     width: 0%;
     position: relative;
@@ -163,4 +190,13 @@ button:hover{
     border-bottom-right-radius:28px ;
     background-color: #ddd;
     position: absolute;
+}
+/* Responsive */
+@media (max-width: 580px) {
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        /* width: inherit;
+        height: inherit; */
+    }
 }
