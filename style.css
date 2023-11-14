@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 /* font-family: 'Nunito Sans', sans-serif; */
+/* font-family: 'Roboto Slab', serif; */
 *{
     padding: 0;
     margin: 0;
@@ -118,7 +120,8 @@ select{
 /*  */
 /*  */
 button{
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 500;
     color: white;
     background-color: black;
     font-size: 16px;
@@ -133,8 +136,9 @@ button{
     transition: background .2s ease;
 }
 button:hover{
-    background-color: #5e5b5b;
-    /* background-color: transparent; */
+    /* background-color: #5e5b5b; */
+    background-color: transparent;
+    color: black;
     border:2px solid black;
 }
 .right{
@@ -194,9 +198,8 @@ button:hover{
 /* Responsive */
 @media (max-width: 580px) {
     .container{
-        display: flex;
-        flex-wrap: wrap;
-        /* width: inherit;
-        height: inherit; */
+        /* display: flex;
+        flex-wrap: wrap; */
+        width: inherit;
     }
 }
